@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="../static/signup.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <!-- Other Imports -->
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/signUp.js"></script>
   </head>
 
   <body>
@@ -59,25 +60,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
 
-        <!-- jQuery onClick -->
-        <script>
-          $(function() {
-            $('#btnSignUp').click(function() {
-              $.ajax({
-                url: '/signUp',
-                data: $('form').serialize(),
-                type: 'POST',
-                success: function(response) {
-                  console.log(response);
-                },
-                error: function(error) {
-                  console.log(error);
-                }
-              });
-            });
-          });
-        </script>
-        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button" value="Sign Up">Sign up</button>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
       </form>
       </div>
 
