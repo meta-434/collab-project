@@ -16,7 +16,9 @@ if ! [ -a `pwd | grep "/tinymb"` ]; then
 fi
 if ! [ -f app.py ]; then
     echo "gotinymb>> Error: Cannot find app.py"
+    echo "gotinymb>> cd into the directory with app.py"
     echo "gotinymb>> It is probably in /home/someone/collab-project/tinymb/"
+    
     echo "gotinymb>> Exiting tinymb script."
     exit 1
 fi
