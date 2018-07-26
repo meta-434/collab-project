@@ -24,12 +24,13 @@ def showSignUp():
 @app.route('/signUp',methods=['POST'])
 def signUp():
     try:
+        conn = mysql.connect()
         _email = request.form['inputEmail']
         _password = request.form['inputPassword']
 
         # validate the received values
         if _email and _password:
-
+            print(_email, _password)
             # All Good, let's call MySQL
 
             cursor = mysql.get_db().cursor()
@@ -50,7 +51,7 @@ def signUp():
         return json.dumps({'error':str(e)})
     finally:
         cursor.close()
-        conn.close()
+        #conn.close()
 
 
 if __name__ == "__main__":
